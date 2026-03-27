@@ -49,5 +49,23 @@ isim, yil, yonetmen = film  # Paketi açtık
 print(isim)     # Inception
 print(yonetmen) # Christopher Nolan
 Özetle: Verilerin değişmesini istiyorsan List, verilerin sabit kalmasını ve güvende olmasını istiyorsan Tuple kullanmalısın.
-
 """
+"""
+Sözlükler (Dictionaries), gerçek hayattaki sözlükler veya rehberler gibi çalışır. Bir kelimeye (Anahtar/Key) bakarsınız ve onun karşılığındaki tanımı (Değer/Value) bulursunuz.
+
+Listelerden farkı, verilere 0, 1, 2 gibi sayılarla değil, kendi verdiğiniz anlamlı isimlerle ulaşmanızdır.
+1. Tanımlama (Nasıl Oluşturulur?)
+Sözlükler süslü parantez {} kullanılarak oluşturulur. Her veri çifti anahtar : değer şeklinde yazılır ve her çift arasına virgül , konur.
+
+Syntax: sozluk = {"anahtar": "değer"}
+
+Örnek:
+
+kullanici = {
+    "isim": "Can",
+    "yas": 25,
+    "sehir": "İstanbul"
+}
+"""
+kullanıcı={"isim":"firi, "yas":45, "sehir":"ankara"}
+print("kullanıcı")
