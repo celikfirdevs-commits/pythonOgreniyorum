@@ -66,6 +66,39 @@ kullanici = {
     "yas": 25,
     "sehir": "İstanbul"
 }
-"""
+
 kullanıcı={"isim":"firi, "yas":45, "sehir":"ankara"}
 print("kullanıcı")
+
+2. Temel Kurallar
+Sözlükleri kullanırken unutmaman gereken iki altın kural vardır:
+
+Anahtarlar (Keys) Benzersiz Olmalıdır: Bir sözlükte aynı isimde iki anahtar olamaz. Eğer aynı anahtarı tekrar kullanırsan, Python eski değerin üzerine yenisini yazar.
+
+Anahtarlar Değiştirilemez (Immutable) Olmalıdır: Genellikle metin (string) veya sayı kullanılır. Listeler anahtar olamaz ama demetler (tuples) olabilir.
+
+Değerler (Values) Her Şey Olabilir: Bir anahtarın karşısındaki değer; bir sayı, bir liste, hatta başka bir sözlük bile olabilir!
+
+3. Neden Sözlük Kullanırız?
+Bir arabanın özelliklerini bir listede tuttuğunu hayal et:
+araba = ["Tesla", "Model 3", 2024, "Beyaz"]
+
+Burada araba[2] dediğinde bunun "yıl" olduğunu ezbere bilmen gerekir. Ama bir Sözlük kullanırsan:
+
+araba = {
+    "marka": "Tesla",
+    "model": "Model 3",
+    "yil": 2024,
+    "renk": "Beyaz"
+}
+
+print(araba["yil"]) # Çıktı: 2024 (Okuması ve anlaması çok daha kolay!)
+
+motor={
+    "marka":"yamaha",
+    "model":"scooters",
+    "yıl":2025,
+    "renk":"mavi"
+}
+print(araba["yıl"])      BURDA NE PROBLEM VAR ????
+"""
