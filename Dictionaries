@@ -1,0 +1,128 @@
+# Create a dictionary called user with keys: name, age, and city.
+#Update the city and add a new key called email. Print only the keys of the dictionary.
+
+kullanıcı={
+         "İsim": "Firi"
+         "Yaş" :"45"
+         "Şehir":"Ankara"
+}
+print(kullanıcı.keys())
+
+kullanıcı["Şehir"]="Bolu"
+
+kullanıcı["email"]:"celikfirdevs@gmail.com"
+
+print(kullanıcı.keys())
+
+print(list(kullanıcı.keys()))
+
+user.update({"Şehir": "İzmir", "Meslek": "İhracat"})
+
+#Try to acCreate a dictionary for a "Product" with a name and price. 
+#Add a new "stock" count and update the price to a new value.
+
+ürün = {
+    "isim":"Kalem"
+    "fiyat":"250"
+ }   
+
+ürün["fiyat"]="300"
+
+ürün["stok"]: "25"
+print(ürün)
+
+ürün.update({
+    "fiyat":350
+    "stok":20
+    "yeni renk":"sarı"
+})
+print(ürün)
+
+#cess a key called "discount". 
+#If it doesn't exist, make sure the program returns 0 instead of crashing.
+
+ürün2={
+    "adı":"Defter"
+    "fiyat2":"550"
+    "stok2":"40"
+}
+indirim = ürün2.get("discount",0)
+print(f"indirim tutarı:{indirim}")    # soru var neden böyle yazıldı ??
+
+#Eğer anahtar yoksa sadece 0 döndürmekle kalmayıp, aynı zamanda o anahtarı sözlüğe kalıcı
+#olarak eklemek isterseniz setdefault() kullanabilirsiniz
+
+product.setdefault("discount", 0)
+
+print(product)
+# Çıktı: {'name': '...', 'price': ..., 'stock': ..., 'discount': 0}
+
+# soru  setdefault anlamadım ...
+
+#Extract all the keys of your dictionary into one variable and all the values into another. Print them.
+
+ürün2={
+    "adı":"Defter"
+    "fiyat2":"550"
+    "stok2":"40"
+    "indirim":"0"
+}
+
+anahtarlar = list(ürün2.keys())
+
+degerler = list(ürün2.values())
+
+print("Anahtarlar Değişkeni:", anahtarlar)
+print("Değerler Değişkeni:", degerler)
+
+#Eğer her ikisine de aynı anda ihtiyacın varsa ve onları çiftler (tuple) halinde görmek 
+#istersen .items() metodunu kullanabilirsin
+
+ciftler = list(ürün2.items())
+print(ciftler)
+
+#Remove the "name" of the product from the dictionary and print the remaining data.
+ürün2={
+    "adı":"Defter"
+    "fiyat2":"550"
+    "stok2":"40"
+    "indirim":"0"
+}
+product.pop("adı")
+
+print("Kalan Ürün Verileri:", ürün2)
+
+product.pop("adı", None)  #Eğer sözlükte "name" diye bir anahtar yoksa, yukarıdaki her iki 
+#yöntem de hata verebilir.
+
+#  del product["adı"]  
+
+#You have two dictionaries representing different features of a phone. 
+#Find a way to merge them into one single dictionary.
+
+#yol 1 
+ozellikler_1 = {"model": "iPhone 15", "renk": "Siyah"}
+ozellikler_2 = {"hafiza": "256GB", "islemci": "A16 Bionic"}
+
+telefon = ozellikler_1 | ozellikler_2
+
+print(telefon)
+#yol 2
+ozellikler_1.update(ozellikler_2)
+
+print(ozellikler_1) 
+
+# yol 3 
+
+telefon = {**ozellikler_1, **ozellikler_2}
+
+#yol 4
+d1 = {"renk": "Mavi"}
+d2 = {"renk": "Kırmızı"}
+
+birlesik = d1 | d2
+print(birlesik["renk"]) # Çıktı: Kırmızı  
+# Eğer her iki sözlükte de aynı isimde bir anahtar varsa (örneğin ikisinde de "renk" varsa), 
+#ikinci sözlükteki değer ilkinin üzerine yazılır. Yani "son gelen kazanır". 
+  
+  
