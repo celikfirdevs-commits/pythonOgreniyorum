@@ -1,0 +1,69 @@
+
+sayılar_listesi=[1,1,3,3,3,5,5,4,6,3,2]
+
+benzersiz_set= set(sayılar_listesi)
+
+#  print(f"Orijinal Liste: {sayilar_listesi}")    soru :anlatımda bu print tarzı neden yazılıyor
+
+print(sayılar_listesi)
+print(benzersiz_set)
+
+temiz_liste = list(set(sayılar_listesi))
+
+#Eğer orijinal sırayı korumak istiyorsanız daha farklı yöntemler (örneğin dict.fromkeys())
+sozluk_hali = dict.fromkeys(sayılar_listesi)
+temiz_liste = list(sozluk_hali)
+
+print(temiz_liste)   
+
+#Add a new email to a set of newsletter subscribers. Then, remove
+#an email from the set without causing an error even if the email wasn't there.
+
+aboneler= {"fc@gmail.com", "dr@yahoo.com","re@yahoo.com"}
+
+aboneler.add("as@gmail.com")
+
+print(aboneler)
+
+#remove(): Eğer silmek istediğiniz e-posta listede yoksa hata verir ve program durur.
+#discard(): Eğer e-posta listede yoksa hiçbir şey yapmaz, 
+#hata vermez ve program sessizce devam eder.
+
+aboneler.remove("dr@yahoo.com")
+print(aboneler)
+
+aboneler.discard("fd@gmail.com")
+
+#You have two sets of student IDs. Find only the IDs that appear in both sets.
+
+sınıfDuman ={103, 404, 654, 505, 160}
+sınıfGölge ={103, 652,980,160,741}
+
+ortakÖgrenciler =sınıfDuman.intersection(sınıfGölge)
+
+print(ortakÖgrenciler)
+
+ortakÖgrenciler2= sınıfDuman&sınıfGölge
+print(ortakÖgrenciler2)
+
+farklıOlan =sınıfDuman-sınıfGölge
+print(farklıOlan)
+
+#Combine two different sets of tags so you 
+#have a single set containing every unique tag from both.
+hayvanlar={"kedi","köpek","kaplumbaga"}
+çiçekler={"gül","papatya","sümbül"}
+
+tümGrup=hayvanlar.union(çiçekler)
+print(tümGrup)
+
+#Find the items that are present in the first set but not in the second set.
+
+grup1={ "kedi", "köpek","kaplumbaga"}
+grup2={"at","kedi","eşşek"}
+
+fark=grup1.difference(grup2)
+print(fark)
+
+fark2=grup2.difference(grup1)
+print(fark2)
