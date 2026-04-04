@@ -1,0 +1,105 @@
+print ('Hello World')
+#Create a tuple representing a point location = (40.7128, -74.0060).
+#Try to change the first value and observe the error.
+
+location = (40.7128, -74.0060)
+print(location)
+
+#location[0] =(40.7200)
+#print(location)   # hata veriyor
+# illa değiştirmek istiyorsan
+
+temp_list = list(location)
+temp_list[0] = 41.0082
+location = tuple(temp_list)
+print(temp_list)
+
+#Create a tuple with 5 elements. Print the first and the last element using 
+#their index.
+
+GezdigimSehirler=["Mugla", "Bursa","Trabzon","Rize"]
+ilkSehir=GezdigimSehirler[0]
+sonSehir=GezdigimSehirler[-1]
+
+print(ilkSehir)
+print(sonSehir)
+
+sıra=GezdigimSehirler.index("Bursa")
+print(sıra)
+
+#Count how many times the value "Gold" appears in a tuple of rewards.
+
+ödüller=("silver","silver","gold","silver","gold","bronze", "gold")
+
+goldSayısı = ödüller.count("gold")
+print(goldSayısı)
+
+#ilk_Gold_Sirasi = ödüller.index("Gold")
+#print(ilkGoldSirasi)      #burdaki sorun nedir anlamadım
+
+#Check if the word "Active" exists inside a tuple of statuses and print a True/False result.
+
+statuses = ("Pending", "Active", "Inactive", "Archived")
+is_active_present = "Active" in statuses
+print(is_active_present)
+
+print("active" in statuses)
+
+is_not_there = "Deleted" not in statuses
+print(is_not_there)
+
+#Take a tuple like (1024, 768) and assign these 
+#two values to two separate variables width and height in a single line of code.
+
+#Genişlik, Yükseklik = cözünürlük
+
+#cözünürlük = (1024, 768)
+
+#print(cözünürlük)   # aşagıdaki örnekle farkı nedir
+
+resolution = (1024, 768)
+
+# Tek satırda değişkenlere ata
+width, height = resolution
+
+print(f"Genişlik: {width}")
+print(f"Yükseklik: {height}")
+
+#Prove that tuples are immutable: Try to change one value in your tuple and observe the error message.
+#Then, research how you can "change" it by converting it to a list first.
+
+#point = (10, 20, 30)
+
+#point[1] = 99
+
+point = (10, 20, 30)
+
+temp_list = list(point)
+
+temp_list[1] = 99
+
+point = tuple(temp_list)
+
+print(f"Yeni Tuple: {point}") 
+
+#Nested Data: Create a list containing two small dictionaries. 
+#Each dictionary should represent a product (name and price).
+
+products = [
+    {
+        "name": "Akıllı Saat",
+        "price": 2500
+    },
+    {
+        "name": "Bluetooth Hoparlör",
+        "price": 1200
+    }
+]
+
+print(products)
+print(products[0]["name"])
+print(products[1]["price"])
+
+new_product = {"name": "USB-C Kablo", "price": 150}
+products.append(new_product)
+print(products)
